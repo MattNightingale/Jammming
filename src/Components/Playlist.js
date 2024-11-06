@@ -9,8 +9,7 @@ function Playlist(props) {
 
     return (
         <div className={styles.Playlist}>
-            <input defaultValue={"New Playlist"} onChange={handleNameChange}/>
-            {/* <!-- Add a TrackList component --> */}
+            <input defaultValue={"Enter name for playlist"} onChange={handleNameChange}/>
             <Tracklist 
             userSearchResults={props.playlistTracks} 
             onRemove={props.onRemove} 

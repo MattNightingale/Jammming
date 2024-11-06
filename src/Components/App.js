@@ -7,33 +7,11 @@ import { Spotify } from '../util/Spotify';
 
 function App() {
   const [searchResults, setSearchResults] = useState([
-    {
-      name: "example track name 1",
-      artist: "example track artist 1",
-      album: "example track album 1",
-      id: 1,
-    },
-    {
-      name: "example track name 2",
-      artist: "example track artist 2",
-      album: "example track album 2",
-      id: 2,
-    },
+    
   ]);
   const [playlistName, setPlaylistName] = useState("Example Playlist Name");
   const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      name: "Example Playlist Name 1",
-      artist: "Example Playlist Artist 1",
-      album: "Example Playlist Artist 1",
-      id: 3,
-    },
-    {
-      name: "Example Playlist Name 2",
-      artist: "Example Playlist Artist 2",
-      album: "Example Playlist Artist 2",
-      id: 4,
-    },
+   
   ]);
 
   function addTrack(track) {
@@ -57,6 +35,10 @@ function App() {
 
   function savePlaylist() {
     const trackURIs = playlistTracks.map((t) => t.uri);
+    Spotify.savePlaylist(playlistName, trackURIs).then(() => {
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    })
   };
 
   function search(term) {
@@ -67,23 +49,21 @@ function App() {
   return (
     <div>
       <h1>
-        Ja<span className={styles.highlight}>mmm</span>ing
+        Ja<span className={styles.highlight}>m</span><span className={styles.yellow}>m</span><span className={styles.green}>m</span>ing
       </h1>
       <div className={styles.App}>
-        <SearchBar onSearch={search}/>
+        <SearchBar onSearch={search} />
         <div className={styles["App-playlist"]}>
-          {/* <!-- Add a SearchResults component --> */}
-          <SearchResults 
-          userSearchResults={searchResults} 
-          onAdd={addTrack} 
+          <SearchResults
+            userSearchResults={searchResults}
+            onAdd={addTrack}
           />
-          {/* <!-- Add a Playlist component --> */}
-          <Playlist 
-          playlistName={playlistName} 
-          playlistTracks={playlistTracks} 
-          onRemove={removeTrack} 
-          onNameChange={updatePlaylistName}
-          onSave={savePlaylist}
+          <Playlist
+            playlistName={playlistName}
+            playlistTracks={playlistTracks}
+            onRemove={removeTrack}
+            onNameChange={updatePlaylistName}
+            onSave={savePlaylist}
           />
         </div>
       </div>

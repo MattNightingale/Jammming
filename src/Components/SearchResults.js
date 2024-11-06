@@ -5,9 +5,9 @@ import Tracklist from './Tracklist';
 function SearchResults(props) {
     return (
         <div className={styles.SearchResults}>
-        {/* <!-- Add a TrackList component --> */}
-        <Tracklist userSearchResults={props.userSearchResults} isRemoval={false} onAdd={props.onAdd}/>
-      </div>
+          <h2>Search results</h2>
+          <Tracklist userSearchResults={props.userSearchResults} isRemoval={false} onAdd={props.onAdd}/>
+        </div>
         );
 };
 
