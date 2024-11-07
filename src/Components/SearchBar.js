@@ -14,11 +14,18 @@ function SearchBar(props) {
         setTerm(target.value);
       };
 
+      function handleKeyPress(e) {
+        if (e.key === 'Enter') {
+            this.passTerm(); 
+        };
+    }
+
       return (
       <div className={styles.SearchBar}>
         <input
           placeholder="Enter A Song, Album, or Artist"
           onChange={handleTermChange}
+          onKeyUp={handleKeyPress}
         />
         <button className={styles.SearchButton} onClick={passTerm}>
           SEARCH
