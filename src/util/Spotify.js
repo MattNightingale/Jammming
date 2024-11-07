@@ -1,6 +1,6 @@
 let accessToken;
 const clientID = "bde60e93bf6240298f875e03899bdd39";
-const redirectUrl = "http://localhost:3000";
+const redirectUrl = "https://jammming-xi.vercel.app/";
 
 const Spotify = {
     getAccessToken() {
