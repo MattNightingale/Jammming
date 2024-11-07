@@ -16,7 +16,7 @@ function SearchBar(props) {
 
       function keyUp(event) {
         if (event.key === "Enter") {
-          this.passTerm()
+          props.onSearch(term);
         }
       };
 
