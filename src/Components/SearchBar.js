@@ -14,8 +14,8 @@ function SearchBar(props) {
         setTerm(target.value);
       };
 
-      function handleKeyPress(e) {
-        if (e.key === 'Enter') {
+      function handleKeyPress({target}) {
+        if (target.key === 'Enter') {
             this.passTerm(); 
         };
     }
