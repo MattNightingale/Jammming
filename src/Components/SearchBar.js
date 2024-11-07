@@ -16,7 +16,7 @@ function SearchBar(props) {
 
       function handleKeyPress({target}) {
         if (target.key === 'Enter') {
-            this.passTerm(); 
+            props.passTerm(); 
         };
     }
 
