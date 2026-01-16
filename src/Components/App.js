@@ -50,12 +50,14 @@ function App() {
   return (
     <div>
       <div className={styles.App}>
+        <header className={styles["header"]}>
         <h1>
           Ja<span className={styles.highlight}>m</span>
           <span className={styles.yellow}>m</span>
           <span className={styles.green}>m</span>ing
-          {userName && <span className={styles["user-name"]}>{userName}</span>}
         </h1>
+        {userName && <span className={styles["user-name"]}>{`Logged in as ${userName}`}</span>}
+        </header>
         <SearchBar onSearch={search} />
         <div className={styles["App-playlist"]}>
           <SearchResults userSearchResults={searchResults} onAdd={addTrack} />

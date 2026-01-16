@@ -8,10 +8,18 @@ html {
   font-size: 18px;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 h1 {
-  padding: .77rem 0;
+  padding: 0.77rem 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.88rem;
   color: #fff;
   margin: 0;
@@ -30,31 +38,27 @@ h1 .green {
   color: #009812;
 }
 
-.title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .user-name {
-  font-size: 1rem;
+  font-size: .5rem;
   font-weight: 400;
   color: #fff;
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.55rem;
 }
 
 .App {
   height: 100nvh;
   padding: 0 17% 10% 17%;
-  background-image: url('../Resources/clubscene.jpg');
+  background-image: url("../Resources/clubscene.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 500;
   color: #fff;
 }
