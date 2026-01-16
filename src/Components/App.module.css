@@ -24,6 +24,8 @@ h1 {
   color: #fff;
   margin: 0;
   width: 100%;
+  align-self: center;
+  justify-self: center;
 }
 
 h1 .highlight {
@@ -45,7 +47,6 @@ h1 .green {
   right: 10px;
   top: 10px;
   width: 100px;
-  position: absolute;
 }
 
 h2 {
@@ -72,6 +73,11 @@ h2 {
 }
 
 @media only screen and (max-width: 1020px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .App-playlist {
     align-items: center;
     flex-direction: column;
