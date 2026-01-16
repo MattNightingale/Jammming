@@ -56,7 +56,7 @@ function App() {
           <span className={styles.yellow}>m</span>
           <span className={styles.green}>m</span>ing
         </h1>
-        {userName && <span className={styles["user-name"]}>{`Logged in as ${userName}`}</span>}
+        {userName && <span className={styles["user-name"]}>{`Logged in: ${userName}`}</span>}
         </header>
         <SearchBar onSearch={search} />
         <div className={styles["App-playlist"]}>
