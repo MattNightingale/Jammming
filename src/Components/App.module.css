@@ -46,7 +46,7 @@ h1 .green {
   color: #fff;
   right: 10px;
   top: 10px;
-  width: 100px;
+  width: fit-content;
 }
 
 h2 {
