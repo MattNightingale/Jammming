@@ -41,9 +41,13 @@ h1 .green {
 
 
 .user-name {
-  font-size: .5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #fff;
+  right: 0;
+  top: 50%;
+  width: fit-content;
+  position: absolute;
 }
 
 h2 {
