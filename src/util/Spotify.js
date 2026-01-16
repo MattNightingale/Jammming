@@ -1,6 +1,6 @@
 let accessToken;
 const clientID = "bde60e93bf6240298f875e03899bdd39";
-const redirectUrl = "https://jammming-xi.vercel.app/";
+const redirectUrl = "https://jammming-kohl-eight.vercel.app/";
 
 const Spotify = {
     getAccessToken() {
@@ -17,7 +17,7 @@ const Spotify = {
         return accessToken;
         }
 
-    const redirect = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUrl}`;
+    const redirect = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=code&scope=playlist-modify-public&redirect_uri=${redirectUrl}`;
     window.location = redirect;
     },
 
