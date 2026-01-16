@@ -125,6 +125,17 @@ const Spotify = {
           });
       });
   },
+
+  async getUserProfile() {
+    const aToken = await Spotify.getAccessToken();
+    const header = { Authorization: `Bearer ${aToken}` };
+    return fetch(`https://api.spotify.com/v1/me`, { headers: header })
+      .then((response) => response.json())
+      .then((jsonResponse) => ({
+        name: jsonResponse.display_name,
+        id: jsonResponse.id,
+      }));
+  },
 };
 
 export { Spotify };
