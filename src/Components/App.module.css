@@ -44,8 +44,8 @@ h1 .green {
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
-  right: 0;
-  top: 50%;
+  right: 10px;
+  top: 10px;
   width: fit-content;
   position: absolute;
 }
