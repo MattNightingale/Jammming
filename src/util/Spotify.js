@@ -1,9 +1,8 @@
 let accessToken;
 const clientID = "bde60e93bf6240298f875e03899bdd39";
-const redirectUrl =
-  "https://jammming-coral.vercel.app/";
+const redirectUrl = "https://jammming-coral.vercel.app/";
 
-// PKCE helper functions
+
 const generateCodeVerifier = () => {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);

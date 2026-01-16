@@ -38,15 +38,13 @@ h1 .green {
   color: #009812;
 }
 
-
-
 .user-name {
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
   right: 10px;
   top: 30px;
-  width: fit-content;
+  width: 100px;
   position: absolute;
 }
 
