@@ -40,7 +40,6 @@
   transition: background-color 0.25s;
   color: #fff;
   font-weight: 500;
-  position: fixed;
 }
 
 .Playlist-save:hover {
