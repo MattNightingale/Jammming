@@ -31,11 +31,9 @@ const Spotify = {
   async getAccessToken() {
     if (accessToken) return accessToken;
 
-    // Check for authorization code in URL
     const code = new URLSearchParams(window.location.search).get("code");
 
     if (code) {
-      // Exchange code for token
       const codeVerifier = localStorage.getItem("code_verifier");
 
       const response = await fetch("https://accounts.spotify.com/api/token", {
@@ -63,7 +61,7 @@ const Spotify = {
       return accessToken;
     }
 
-    // No token and no code, redirect to Spotify auth
+
     const codeVerifier = generateCodeVerifier();
     localStorage.setItem("code_verifier", codeVerifier);
 
@@ -97,10 +95,10 @@ const Spotify = {
   },
 
   async savePlaylist(name, trackUris) {
+
     if (!name || !trackUris) return;
     const aToken = await Spotify.getAccessToken();
     const header = { Authorization: `Bearer ${aToken}` };
-    let userId;
     return fetch(`https://api.spotify.com/v1/me`, { headers: header })
       .then((response) => response.json())
       .then((jsonResponse) => {

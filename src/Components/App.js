@@ -58,6 +58,7 @@ function App() {
         </h1>
         {userName && <span className={styles["user-name"]}>{`Logged in: ${userName}`}</span>}
         </header>
+        <main className={styles.main}>
         <SearchBar onSearch={search} />
         <div className={styles["App-playlist"]}>
           <SearchResults userSearchResults={searchResults} onAdd={addTrack} />
@@ -69,6 +70,7 @@ function App() {
             onSave={savePlaylist}
           />
         </div>
+        </main>
       </div>
     </div>
   );
